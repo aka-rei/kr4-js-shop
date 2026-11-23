@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Корзина светильников: количество, промокод и сумма заявки.">
+    <title>Корзина | СВЕТ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-header__logo" href="index.html">СВЕТ</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="index.html">Главная</a></li>
+            <li>
+              <a
+                class="site-nav__link"
+                href="catalog.html"
+              >
+                Каталог
+              </a>
+            </li>
+            <li><a class="site-nav__link" href="product.html">Товары</a></li>
+            <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+            <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+            <li><a class="site-nav__link site-nav__link--active" href="cart.html" aria-current="page">Корзина (<span data-cart-count>0</span>)</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <p class="container shop-message" data-shop-message role="status" aria-live="polite" aria-atomic="true"></p>
+    <noscript><p class="container form-message">Для каталога, корзины и учебных форм включите JavaScript.</p></noscript>
+    <main class="container" id="main" tabindex="-1">
+      <h1 class="page-title">Корзина</h1>
+      <p class="page-description">Выберите количество и подготовьте заявку на светильники.</p>
+      <div class="empty-state" data-cart-empty>
+        <h2>Пока нет светильников</h2>
+        <p>Добавьте понравившуюся модель из каталога. Она появится здесь.</p>
+        <a class="button" href="catalog.html">Выбрать светильник</a>
+      </div>
+      <div class="cart-layout" data-cart-content hidden>
+        <section aria-labelledby="cart-items-title">
+          <div class="cart-heading">
+            <h2 id="cart-items-title">Ваши товары</h2>
+            <button class="button button--secondary" type="button" data-clear-cart>Очистить корзину</button>
+          </div>
+          <div data-cart-items></div>
+        </section>
+        <aside class="cart-summary" aria-labelledby="cart-summary-title">
+          <h2 id="cart-summary-title">Сумма заявки</h2>
+          <dl class="cart-totals" aria-live="polite" aria-atomic="true">
+            <dt>Товары</dt><dd data-cart-subtotal>0 ₽</dd>
+            <dt>Скидка</dt><dd data-cart-discount>0 ₽</dd>
+            <dt class="cart-totals__total">Итого</dt><dd class="cart-totals__total" data-cart-total>0 ₽</dd>
+          </dl>
+          <form id="promo-form">
+            <label class="order-form__label" for="promo-code">Промокод</label>
+            <p class="order-form__hint" id="promo-hint">Учебный код SVET10 даёт скидку 10%.</p>
+            <input class="order-form__input" id="promo-code" name="promo" type="text" maxlength="30" aria-describedby="promo-hint promo-message" autocomplete="off">
+            <button class="button button--secondary" type="submit">Применить</button>
+            <p id="promo-message" role="status" aria-live="polite"></p>
+          </form>
+          <a class="button" href="order.html?source=cart">Перейти к заявке</a>
+          <p class="order-form__hint">Учебный магазин: оплата и доставка не выполняются.</p>
+        </aside>
+      </div>
+    </main>
+    <p class="container storage-note" data-storage-note hidden>Браузер запретил сохранение. Корзина работает только на текущей странице; разрешите хранилище для перехода между страницами.</p>
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p>2026 СВЕТ — учебный проект</p>
+        <nav class="site-footer__links" aria-label="Разделы главной страницы">
+          <a href="index.html#advantages">Преимущества</a>
+          <a href="index.html#popular">Популярные товары</a>
+          <a href="index.html#contacts">Контакты</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

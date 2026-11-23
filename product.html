@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Описание, цены и таблица характеристик девяти настольных светильников.">
+    <title>Описание товаров | СВЕТ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-header__logo" href="index.html">СВЕТ</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="index.html">Главная</a></li>
+            <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+            <li>
+              <a
+                class="site-nav__link site-nav__link--active"
+                href="product.html"
+                aria-current="page"
+              >
+                Товары
+              </a>
+            </li>
+            <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+            <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+            <li><a class="site-nav__link" href="cart.html">Корзина (<span data-cart-count>0</span>)</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <p class="container shop-message" data-shop-message role="status" aria-live="polite" aria-atomic="true"></p>
+    <noscript><p class="container form-message">Для каталога, корзины и учебных форм включите JavaScript.</p></noscript>
+    <main class="container" id="main" tabindex="-1">
+      <h1 class="page-title">Светильники</h1>
+      <p class="page-description">Характеристики всех моделей. Выберите светильник и добавьте его в корзину.</p>
+      <div data-product-details></div>
+      <section
+        class="section table-wrap"
+        id="specifications"
+        tabindex="0"
+        aria-label="Характеристики светильников"
+      >
+        <table class="spec-table">
+          <caption>Характеристики</caption>
+          <thead>
+            <tr>
+              <th scope="col">Параметр</th>
+              <th scope="col">Купол</th>
+              <th scope="col">Линия</th>
+              <th scope="col">Точка</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Высота</th>
+              <td>38 см</td>
+              <td>45 см</td>
+              <td>28 см</td>
+            </tr>
+            <tr>
+              <th scope="row">Мощность</th>
+              <td>8 Вт</td>
+              <td>10 Вт</td>
+              <td>4 Вт</td>
+            </tr>
+            <tr>
+              <th scope="row">Питание</th>
+              <td>От сети</td>
+              <td>От сети</td>
+              <td>Аккумулятор</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <dialog class="modal" id="order-modal" aria-labelledby="modal-title" aria-describedby="modal-description">
+        <h2 id="modal-title">Заявка на светильник</h2>
+        <p id="modal-description" data-modal-description></p>
+        <div class="modal__actions">
+          <a class="button" href="order.html" data-modal-link>Перейти к форме</a>
+          <button class="button button--secondary" type="button" data-close-modal>Закрыть</button>
+        </div>
+      </dialog>
+    </main>
+    <p class="container storage-note" data-storage-note hidden>Браузер запретил сохранение. Корзина работает только на текущей странице; разрешите хранилище для перехода между страницами.</p>
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p>2026 СВЕТ — учебный проект</p>
+        <nav class="site-footer__links" aria-label="Разделы главной страницы">
+          <a href="index.html#advantages">Преимущества</a>
+          <a href="index.html#popular">Популярные товары</a>
+          <a href="index.html#contacts">Контакты</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
