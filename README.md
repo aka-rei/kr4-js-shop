@@ -7,8 +7,10 @@
 навигация, изображения с `srcset`, skip-link и доступное модальное окно.
 КР3 не изменена. КР4 находится в самостоятельном проекте `kr4-js-shop`.
 
-**Публикация:** проект подготовлен для отдельного репозитория GitHub и GitHub Pages.
-Ссылки будут добавлены после публикации. Файл `.nojekyll` отключает обработку Jekyll:
+**Репозиторий:** [aka-rei/kr4-js-shop](https://github.com/aka-rei/kr4-js-shop).
+**GitHub Pages:** [открыть магазин](https://aka-rei.github.io/kr4-js-shop/).
+
+Файл `.nojekyll` отключает обработку Jekyll:
 HTML, CSS, JavaScript и изображения публикуются напрямую из корня ветки `main`.
 
 ## Запуск
@@ -51,6 +53,7 @@ kr4-js-shop/
 │   └── main.js
 ├── images/              # WebP из КР3, в том числе варианты 480 и 960 px
 ├── .gitignore
+├── .nojekyll            # Прямая публикация статических файлов на GitHub Pages
 └── README.md
 ```
 
